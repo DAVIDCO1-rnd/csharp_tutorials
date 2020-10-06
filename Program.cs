@@ -1,83 +1,59 @@
 ﻿using System;
-using System.Threading.Tasks;
 
-public class Account
+namespace SortWithDelegate
 {
-    private readonly object balanceLock = new object();
-    private decimal balance;
-
-    public Account(decimal initialBalance) => balance = initialBalance;
-
-    public decimal Debit(decimal amount)
+  public delegate int CompareDeleg(int a, int b);
+ 
+  class Program
+  {
+    static int[] arr;
+ 
+    static int CompareAsc(int x, int y)
     {
-        if (amount < 0)
-        {
-            throw new ArgumentOutOfRangeException(nameof(amount), "The debit amount cannot be negative.");
-        }
-
-        decimal appliedAmount = 0;
-        lock (balanceLock)
-        {
-            if (balance >= amount)
-            {
-                balance -= amount;
-                appliedAmount = amount;
-            }
-        }
-        return appliedAmount;
+      return x - y;
     }
-
-    public void Credit(decimal amount)
+ 
+    static int CompareDesc(int x, int y)
     {
-        if (amount < 0)
-        {
-            throw new ArgumentOutOfRangeException(nameof(amount), "The credit amount cannot be negative.");
-        }
-
-        lock (balanceLock)
-        {
-            balance += amount;
-        }
+      return y - x;
     }
-
-    public decimal GetBalance()
+ 
+    static void Sort(CompareDeleg compareMethod)
     {
-        lock (balanceLock)
-        {
-            return balance;
-        }
+      for (int i = 0; i < arr.Length - 1; i++)
+        for (int j = i + 1; j < arr.Length; j++)
+          if (compareMethod(arr[i], arr[j]) > 0)
+            Replace(i, j);
     }
-}
-
-class AccountTest
-{
-    static async Task Main()
+ 
+    private static void Replace(int i, int j)
     {
-        var account = new Account(1000);
-        var tasks = new Task[100];
-        for (int i = 0; i < tasks.Length; i++)
-        {
-            tasks[i] = Task.Run(() => Update(account));
-        }
-        await Task.WhenAll(tasks);
-        Console.WriteLine($"Account's balance is {account.GetBalance()}");
-        // Output:
-        // Account's balance is 2000
+      int tmp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = tmp;
     }
-
-    static void Update(Account account)
+ 
+    static void PrintArr()
     {
-        decimal[] amounts = { 0, 2, -3, 6, -2, -1, 8, -5, 11, -6 };
-        foreach (var amount in amounts)
-        {
-            if (amount >= 0)
-            {
-                account.Credit(amount);
-            }
-            else
-            {
-                account.Debit(Math.Abs(amount));
-            }
-        }
+      foreach (int num in arr)
+        Console.Write(num + ",");
+ 
+      Console.WriteLine();
     }
+ 
+    static void Main(string[] args)
+    {
+      arr = new int[] { 123, 200, -63, 2, 7612, -13, 8 };
+      Console.WriteLine("Orginal nuumbers:");
+      PrintArr();
+ 
+      Sort(new CompareDeleg(CompareAsc));
+      Console.WriteLine("\nAscending order:");
+      PrintArr();
+ 
+      Sort(new CompareDeleg(CompareDesc));
+      Console.WriteLine("\nDescending order:");
+      PrintArr();
+    }
+  }
 }
