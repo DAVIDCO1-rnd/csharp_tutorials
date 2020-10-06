@@ -1,30 +1,83 @@
 ﻿using System;
-using System.Threading;
+using System.Threading.Tasks;
 
-public class Example 
+public class Account
 {
-    public static void Main() 
-    {
-        // Queue the task.
-        ThreadPool.QueueUserWorkItem(ThreadProc);
-        Console.WriteLine("Main thread does some work, then sleeps.");
-        //Thread.Sleep(1000);
+    private readonly object balanceLock = new object();
+    private decimal balance;
 
-        Console.WriteLine("Main thread exits.");
+    public Account(decimal initialBalance) => balance = initialBalance;
+
+    public decimal Debit(decimal amount)
+    {
+        if (amount < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(amount), "The debit amount cannot be negative.");
+        }
+
+        decimal appliedAmount = 0;
+        lock (balanceLock)
+        {
+            if (balance >= amount)
+            {
+                balance -= amount;
+                appliedAmount = amount;
+            }
+        }
+        return appliedAmount;
     }
 
-    // This thread procedure performs the task.
-    static void ThreadProc(Object stateInfo) 
+    public void Credit(decimal amount)
     {
-        // No state object was passed to QueueUserWorkItem, so stateInfo is null.
-        Console.WriteLine("Hello from the thread pool 1.");
-        Console.WriteLine("Hello from the thread pool 2.");
-        Console.WriteLine("Hello from the thread pool 3.");
-        Console.WriteLine("Hello from the thread pool 4.");
-        Console.WriteLine("Hello from the thread pool 5.");
+        if (amount < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(amount), "The credit amount cannot be negative.");
+        }
+
+        lock (balanceLock)
+        {
+            balance += amount;
+        }
+    }
+
+    public decimal GetBalance()
+    {
+        lock (balanceLock)
+        {
+            return balance;
+        }
     }
 }
-// The example displays output like the following:
-//       Main thread does some work, then sleeps.
-//       Hello from the thread pool.
-//       Main thread exits.
+
+class AccountTest
+{
+    static async Task Main()
+    {
+        var account = new Account(1000);
+        var tasks = new Task[100];
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            tasks[i] = Task.Run(() => Update(account));
+        }
+        await Task.WhenAll(tasks);
+        Console.WriteLine($"Account's balance is {account.GetBalance()}");
+        // Output:
+        // Account's balance is 2000
+    }
+
+    static void Update(Account account)
+    {
+        decimal[] amounts = { 0, 2, -3, 6, -2, -1, 8, -5, 11, -6 };
+        foreach (var amount in amounts)
+        {
+            if (amount >= 0)
+            {
+                account.Credit(amount);
+            }
+            else
+            {
+                account.Debit(Math.Abs(amount));
+            }
+        }
+    }
+}
