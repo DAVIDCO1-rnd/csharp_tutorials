@@ -1,0 +1,10 @@
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\obj\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.csproj.CoreCompileInputs.cache
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\obj\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.AssemblyInfoInputs.cache
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\obj\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.AssemblyInfo.cs
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\bin\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.deps.json
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\bin\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.runtimeconfig.json
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\bin\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.runtimeconfig.dev.json
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\bin\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.dll
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\bin\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.pdb
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\obj\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.dll
+D:\Developments\csharp_tutorials\Linq_tutorial_02_faro_shuffle\obj\Debug\netcoreapp2.1\Linq_tutorial_02_faro_shuffle.pdb

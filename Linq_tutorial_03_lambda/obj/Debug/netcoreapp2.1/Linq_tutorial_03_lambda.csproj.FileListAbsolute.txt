@@ -1,0 +1,10 @@
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\bin\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.deps.json
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\bin\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.runtimeconfig.json
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\bin\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.runtimeconfig.dev.json
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\bin\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.dll
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\bin\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.pdb
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\obj\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.csproj.CoreCompileInputs.cache
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\obj\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.AssemblyInfoInputs.cache
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\obj\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.AssemblyInfo.cs
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\obj\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.dll
+D:\Developments\csharp_tutorials\Linq_tutorial_03_lambda\obj\Debug\netcoreapp2.1\Linq_tutorial_03_lambda.pdb

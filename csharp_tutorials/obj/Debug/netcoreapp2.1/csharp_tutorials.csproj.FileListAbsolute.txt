@@ -1,0 +1,10 @@
+D:\Developments\csharp_tutorials\csharp_tutorials\bin\Debug\netcoreapp2.1\csharp_tutorials.deps.json
+D:\Developments\csharp_tutorials\csharp_tutorials\bin\Debug\netcoreapp2.1\csharp_tutorials.runtimeconfig.json
+D:\Developments\csharp_tutorials\csharp_tutorials\bin\Debug\netcoreapp2.1\csharp_tutorials.runtimeconfig.dev.json
+D:\Developments\csharp_tutorials\csharp_tutorials\bin\Debug\netcoreapp2.1\csharp_tutorials.dll
+D:\Developments\csharp_tutorials\csharp_tutorials\bin\Debug\netcoreapp2.1\csharp_tutorials.pdb
+D:\Developments\csharp_tutorials\csharp_tutorials\obj\Debug\netcoreapp2.1\csharp_tutorials.csproj.CoreCompileInputs.cache
+D:\Developments\csharp_tutorials\csharp_tutorials\obj\Debug\netcoreapp2.1\csharp_tutorials.AssemblyInfoInputs.cache
+D:\Developments\csharp_tutorials\csharp_tutorials\obj\Debug\netcoreapp2.1\csharp_tutorials.AssemblyInfo.cs
+D:\Developments\csharp_tutorials\csharp_tutorials\obj\Debug\netcoreapp2.1\csharp_tutorials.dll
+D:\Developments\csharp_tutorials\csharp_tutorials\obj\Debug\netcoreapp2.1\csharp_tutorials.pdb

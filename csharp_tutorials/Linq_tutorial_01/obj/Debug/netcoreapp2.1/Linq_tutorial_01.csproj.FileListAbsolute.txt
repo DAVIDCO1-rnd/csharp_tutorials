@@ -1,0 +1,10 @@
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\obj\Debug\netcoreapp2.1\Linq_tutorial_01.csproj.CoreCompileInputs.cache
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\obj\Debug\netcoreapp2.1\Linq_tutorial_01.AssemblyInfoInputs.cache
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\obj\Debug\netcoreapp2.1\Linq_tutorial_01.AssemblyInfo.cs
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\bin\Debug\netcoreapp2.1\Linq_tutorial_01.deps.json
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\bin\Debug\netcoreapp2.1\Linq_tutorial_01.runtimeconfig.json
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\bin\Debug\netcoreapp2.1\Linq_tutorial_01.runtimeconfig.dev.json
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\bin\Debug\netcoreapp2.1\Linq_tutorial_01.dll
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\bin\Debug\netcoreapp2.1\Linq_tutorial_01.pdb
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\obj\Debug\netcoreapp2.1\Linq_tutorial_01.dll
+D:\Developments\csharp_tutorials\csharp_tutorials\Linq_tutorial_01\obj\Debug\netcoreapp2.1\Linq_tutorial_01.pdb
